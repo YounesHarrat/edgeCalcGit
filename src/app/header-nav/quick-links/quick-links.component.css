@@ -1,0 +1,33 @@
+.spacer {
+  flex: 1 1 auto;
+}
+
+.quickMenu {
+  margin: auto;
+  margin-top:2vh;
+  padding-inline-start: 33vh;
+  padding-block-end: 0px;
+  display: flex;
+  flex-direction: column;
+}
+
+span.row{
+  display: flex;
+  align-items: center;
+}
+
+
+.row{
+  display: flex;
+}
+
+
+.row{
+  justify-content: flex-end;
+}
+
+.container{
+  margin-top:10vh;
+  padding-bottom: 4vh;
+  height: fit-content;
+}

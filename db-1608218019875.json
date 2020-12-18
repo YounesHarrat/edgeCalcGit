@@ -1,0 +1,11 @@
+{
+  "articles": [
+    {
+      "theme": "News",
+      "title": "Un article",
+      "fromSource": "The Wall Street Journal",
+      "imgUrl": "",
+      "videoUrl": ""
+    }
+  ]
+}

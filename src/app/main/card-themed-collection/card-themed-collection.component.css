@@ -1,0 +1,46 @@
+.cardsContainer{
+  margin: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-content: space-around;
+
+}
+
+
+.card{
+  margin: 15px;
+  max-width: 400px;
+  max-height: min-content;
+  width: fit-content;
+  height: min-content;
+}
+img{
+  max-width: 400px;
+}
+
+.footer{
+  padding: 5px;
+  font-size: 10px;
+  text-align: start;
+}
+
+
+.spacer{
+  flex: 1 1 auto;
+}
+
+p{
+  text-overflow: clip;
+  word-break: break-all;
+}
+
+.row{
+  display: flex;
+  align-content: center;
+}
+
+a{
+  text-decoration: none;
+  color:black;
+}

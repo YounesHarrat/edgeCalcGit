@@ -1,0 +1,34 @@
+<mat-toolbar *ngIf="!toggle; else open" class="container">
+
+  <span class="spacer"></span>
+
+      <div class="quickMenu" >
+        <span class="row">
+          <h5>Quick links</h5>
+          <button mat-icon-button aria-label="down" (click)="toggler()">
+            <mat-icon>expand_more</mat-icon>
+          </button>
+        </span>
+      </div>
+
+
+  <span class="spacer"></span>
+
+</mat-toolbar>
+
+<ng-template #open class="linkGrid">
+  <mat-toolbar class="container">
+
+    <span class="spacer"></span>
+    <div class="quickMenu">
+      <div class="row">
+        <button mat-icon-button aria-label="down" (click)="toggler()">
+          <mat-icon>expand_less</mat-icon>
+        </button>
+      </div>
+      <app-clicked-cards-grid ></app-clicked-cards-grid>
+    </div>
+    <span class="spacer"></span>
+
+  </mat-toolbar>
+</ng-template>

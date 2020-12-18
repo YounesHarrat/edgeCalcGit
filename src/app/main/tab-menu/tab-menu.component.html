@@ -1,0 +1,5 @@
+<mat-tab-group>
+  <mat-tab label="{{theme}}" *ngFor="let theme of ThemeCollection">
+    <app-card-themed-collection [theme]="theme" (click)="themeIs(theme)"></app-card-themed-collection>
+  </mat-tab>
+</mat-tab-group>

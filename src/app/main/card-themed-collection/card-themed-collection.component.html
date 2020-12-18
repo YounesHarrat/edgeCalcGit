@@ -1,0 +1,34 @@
+<div *ngIf="theme==='MyFeed';else NewsFrom">
+  <router-outlet></router-outlet>
+</div>
+
+<ng-template #NewsFrom >
+  <div class="cardsContainer">
+  <mat-card *ngFor="let article of articles" class="card" [ngStyle]="{style: expression}" (click)="memorizeToMyFeed(article)">
+  <a href="{{article.url}}" target="_blank" rel="noopener noreferrer" >
+    <img mat-card-img src="{{article.urlToImage}}" >
+    <mat-card-content>
+      <mat-card-subtitle>{{article.author}}</mat-card-subtitle>
+      <mat-card-title>{{article.title}}</mat-card-title>
+      <p>{{article.description}}</p>
+      <mat-card-footer class="footer">
+        <span class="row">
+          {{article.source.name}}
+          <span class="spacer"></span>
+          <button mat-icon-button aria-label="save">
+            <mat-icon>save_alt</mat-icon>
+          </button>
+        </span>
+      <span class="row">
+        <span class="spacer"></span>
+        {{article.publishedAt}}
+      </span>
+      </mat-card-footer>
+    </mat-card-content>
+
+  </a>
+  </mat-card>
+  </div>
+</ng-template>
+
+

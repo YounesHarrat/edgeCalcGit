@@ -1,0 +1,15 @@
+.headerNavContainer {
+  padding-top: 4vh;
+  background-color: rgb(247,247,247);
+}
+
+.edgeStyleHeader{
+  display:grid;
+  place-items: stretch;
+  grid-auto-rows: auto;
+  grid-column: 2/auto;
+  column-gap: 8px;
+  grid-template-columns: repeat(12,1fr);
+}
+
+
