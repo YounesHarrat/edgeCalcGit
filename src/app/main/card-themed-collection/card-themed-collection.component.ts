@@ -15,14 +15,18 @@ export class CardThemedCollectionComponent implements OnInit {
 
   articles: Article[] = [];
   myFeed: Article[]=new Array<Article>();
+  today: number =  Date.now();
+
 
   apiKey: string = "ad452b911ba843b5888e81d020038524"
 
   constructor(private articleService: ArticleService,private router: Router) { }
 
   ngOnInit(): void {
+    console.log(this.today )
     if(this.feed){
       console.log(this.feed)
+
     }else{
       switch (this.theme) {
         case "MyFeed": this.router.navigate(["/myFeed"], { state: {theme: this.theme , feed:this.myFeed}})
@@ -78,7 +82,7 @@ export class CardThemedCollectionComponent implements OnInit {
   fetchbyTheme(theme:string): void{
     const url = 'http://newsapi.org/v2/everything?' +
     'q='+theme+'&' +
-    'from=2020-12-1&to=2020-12-18&'+
+    'from=2020-12-1&to='+this.today.toString()+'&'+
     'pageSize=3&page=1&'+
     'sortBy=popularity&' +
     'apiKey='+this.apiKey;;
